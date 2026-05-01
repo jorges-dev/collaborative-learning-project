@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cadastro de Usuário</h1>
+      <form id="formCadastro">
+        <!--tag mais prática e simplifica o trabalho-->
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required minlength="3" />
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" required min="0" max="120" />
+        <!--Validação inteira do formulário sem precisar de JavaScript. Tudo em HTML-->
+        <button type="submit">Cadastrar</button>
+        <!--Recomendado apenas um botão por formulário-->
+      </form>
+
+      <div class="mensagem" id="mensagem"></div>
+    </div>
+
+    <script>
+      <!--Aqui já não é mais html, é JavaScript-->
+      const form = document.getElementById("formCadastro");
+      const mensagem = document.getElementById("mensagem");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const idade = document.getElementById("idade").value;
+
+        mensagem.style.color = "green";
+        mensagem.innerHTML =
+          "Cadastro realizado com sucesso!<br>Nome: " +
+          nome +
+          "<br>Idade: " +
+          idade;
+      });
+    </script>
+  </body>
+</html>
