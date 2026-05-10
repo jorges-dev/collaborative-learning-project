@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário Aula PAC</title>
+  </head>
+  <header style="text-align: center; display:inline-flexbox; width: 99%; align-items: center; padding: 8px; justify-content: space-between; margin: 4px;">
+    <!--Cabeçalho colorido com logomarca-->
+    <div
+      style="
+        padding:1cap;
+        padding-inline-start: 0%;
+        background-color: navajowhite; margin:0;
+      "
+    >
+      <h1
+        style="
+          font-family: cursive;
+          color: brown;
+          align-content:center;
+          font-size: 80px; margin: 2px; padding: 8px; width: 100%; border 2px solid #333;
+        "
+      >
+        <img src="machado.png" alt="Ilustração Machado Assis"; width="120px; padding-inline-start">Clube de Leitura Machado de Assis
+      </h1>
+    </div>
+  </header>
+  <body style="padding: 0; margin: 0; min-height: 100vh; display:grid">
+    <!--Região do Formulário-->
+    <div class="container" style="text-align: center">
+      <h2 style="color: brown;">Cadastro de Novos Leitores</h2>
+      <form id="formCadastro" style="font-size: 23px">
+        <!--tag mais prática e simplifica o trabalho-->
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required minlength="3" /><br /><br />
+        <label for="nome">E-mail</label>
+        <input type="email" id="email" /><br /><br />
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" required min="0" max="120" />
+        <button type="submit">Cadastrar</button>
+        <!--Recomendado apenas um botão por formulário-->
+      </form>
+    </div>
+    <!--Nossa mensagem que será conectada ao Script. Essa mensagem será exibida após a realização do cadastro-->
+     <div class="mensagem" id="mensagem"></div>
+     <!--Aqui não é mais html, é o nosso bloco de JavaScript-->
+        <script>
+      const form = document.getElementById("formCadastro");
+      const mensagem = document.getElementById("mensagem");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const idade = document.getElementById("idade").value;
+        const email = document.getElementById("email").value;
+
+        mensagem.style.color = "green";
+        mensagem.style.textAlign = "center"
+        mensagem.innerHTML =
+          "<b>Cadastro realizado com sucesso!<b><br>Nome: " +
+          nome + "<br>E-mail: " + email +
+          "<br>Idade: " +
+          idade;
+      });
+    </script>
+      <br />
+      <!--Adicionei uma brincadeira no final. Queria deixar a página mais pomposa.-->
+      <div>
+        <hr style="margin: 8px;" />
+      <h2 style="color: brown; text-align: center;">Diretrizes do Nosso Clube</h2>
+
+      <div style="font-size: 20px; text-align: center; padding: 4px; margin: 8px;">
+        <!--Aqui coloquei uma tabela-->
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Número da Regra</th>
+            <th>Descrição da Regra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color: brown; font-weight: bold;">Regra 1</td>
+            <td>
+              Se você tem mais de 120 anos, sinto lhe dizer que não será
+              possível considerar seu cadastro. Suas retinas cansadas são um
+              indicador de que só iremos gastar nosso valioso recurso de máquina
+              - Já está fazendo hora extra...
+            </td>
+          </tr>
+          <tr>
+            <td style="color: brown; font-weight: bold;">Regra 2</td>
+            <td>
+              Se você nasceu antes da criação do e-mail, também não será
+              possível validar seu cadastro.
+            </td>
+          </tr>
+          <tr>
+            <td style="color: brown; font-weight: bold;">Regra 3</td>
+            <td>
+              Se seu nome é Dennis Ritchie, Tim Berners-Lee ou Linus Torvalds,
+              você não precisa realizar o cadastro - É nosso convidado de honra.
+            </td>
+          </tr>
+           <td style="color: brown; font-weight: bold;">Regra 4</td>
+            <td>
+              Usuários Linux só podem realizar cadastro via terminal.
+            </td>
+          </tr>
+          </tr>
+           <td style="color: brown; font-weight: bold;">Regra 4</td>
+            <td>
+              Se você é usuário Windows, disponibilizamos ajuda do nosso mascote Clippy, ele vai lhe fornecer orientações sobre onde você deve clicar e inserir seus dados.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    </body>
+</html>
