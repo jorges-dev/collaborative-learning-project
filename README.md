@@ -1,7 +1,7 @@
-# Class Web UX
+# Class Collaborative Learning Project
 
-> Web UX exercises and experiments — Software Engineering coursework  
-> Exercícios e experimentos de Web UX — disciplina de Engenharia de Software
+> Collaborative Learning Project exercises and experiments — Software Engineering coursework  
+> Exercícios e experimentos de Projeto de Aprendizagem Colaborativa — disciplina de Engenharia de Software
 
 [🇧🇷 Português](#-português) · [🇺🇸 English](#-english)
 
@@ -11,34 +11,14 @@
 
 ### Overview
 
-This repository contains web development exercises focused on UX principles, semantic HTML, and modern CSS practices. Part of the Software Engineering coursework at Católica SC (Joinville, Brazil).
+This repository contains web development exercises focused on Collaborative Learning Project, that gathers the knowledge of all other matters. Part of the Software Engineering coursework at Católica SC (Joinville, Brazil).
 
 ### Tech Stack
 
 - HTML5 (semantic markup)
 - CSS3 (responsive design)
 - JavaScript (vanilla)
-
-### How to Run
-
-\`\`\`bash
-git clone git@github.com:jorges-dev/class-web-ux.git
-cd class-web-ux
-\`\`\`
-
-Open \`index.html\` in your browser, or use the **Live Server** VS Code extension for hot-reload.
-
-### Project Structure
-
-\`\`\`
-class-web-ux/
-├── index.html
-├── assets/
-│   ├── css/
-│   ├── js/
-│   └── img/
-└── README.md
-\`\`\`
+- C-Language
 
 ### Author
 
@@ -52,22 +32,14 @@ Software Engineering student · Católica SC
 
 ### Visão geral
 
-Este repositório reúne exercícios de desenvolvimento web focados em princípios de UX, HTML semântico e boas práticas de CSS moderno. Parte da disciplina de Engenharia de Software na Católica SC (Joinville, Brasil).
+Este repositório reúne exercícios de desenvolvimento web focados Projeto de Aprendizagem Colaborativa, que reúne o conhecimento de todos os outras matérias. Parte da disciplina de Engenharia de Software na Católica SC (Joinville, Brasil).
 
 ### Stack
 
 - HTML5 (marcação semântica)
 - CSS3 (design responsivo)
 - JavaScript (vanilla)
-
-### Como executar
-
-\`\`\`bash
-git clone git@github.com:jorges-dev/class-web-ux.git
-cd class-web-ux
-\`\`\`
-
-Abra o \`index.html\` no navegador ou use a extensão **Live Server** do VS Code para hot-reload.
+- C-Language
 
 ### Autor
 
